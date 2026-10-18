@@ -9,3 +9,4 @@
 /.demo-login
 /node_modules
 /web/uploads/**/_*/
+/config/license.key.*
