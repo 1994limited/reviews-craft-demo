@@ -37,7 +37,6 @@ plugins:
   commerce:
     edition: pro
     enabled: true
-    licenseKey: 3MOMN5J37T5DG347W9P3VOIT
     schemaVersion: 5.7.0.0
   reviews:
     edition: standard
