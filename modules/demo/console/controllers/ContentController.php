@@ -92,6 +92,7 @@ class ContentController extends Controller
         }
 
         $made = $this->reviews([...$products, ...$entries], $products, $jo, $order);
+        $made += $this->elsewhere();
 
         $this->stdout("Made {$made} reviews of ".count($products).' books and '.count($entries)." journal entries.\n", Console::FG_GREEN);
         $this->stdout("Jo (jo@example.com) bought \"{$products[0]->title}\" and \"{$products[1]->title}\": their review of the first is verified.\n");
@@ -271,6 +272,37 @@ class ContentController extends Controller
         $reviews->spam($this->review($products[5], 5, 'Cheap watches', 'Best prices on watches at www.watches-cheap.example', 'Totally Real', 3));
 
         return $made + 5;
+    }
+
+    /**
+     * Reviews from elsewhere: two Trustpilot reviews imported from an export
+     * (they show "From Trustpilot", and don't count towards the average), and
+     * a Feefo sync source, switched off so the demo never calls Feefo.
+     */
+    protected function elsewhere(): int
+    {
+        $plugin = Reviews::getInstance();
+
+        $csv = "Review Id,Review Created (UTC),Review Stars,Review Title,Review Content,Consumer Name,Review URL,Product SKU\n"
+            ."demo-tp-1,2026-09-12T10:00:00Z,5,Arrived beautifully wrapped,\"Ordered for my dad's birthday. It came in two days, wrapped in brown paper and string.\",Priya Shah,https://uk.trustpilot.com/reviews/demo-tp-1,DOG-002\n"
+            ."demo-tp-2,2026-08-30T09:30:00Z,4,Lovely shop,\"Good choice of books, and a handwritten note in the parcel.\",Tom Ellery,https://uk.trustpilot.com/reviews/demo-tp-2,DOG-002\n";
+
+        $report = $plugin->imports->import($plugin->imports->read($csv)->reviews, new \nineteenninetyfour\reviews\models\ImportOptions);
+
+        $sources = $plugin->sync;
+        $exists = array_filter($sources->all(), fn ($source) => $source->type === 'feefo');
+
+        if (! $exists) {
+            $source = new \nineteenninetyfour\reviews\models\Source([
+                'type' => 'feefo',
+                'name' => 'Feefo',
+                'settings' => ['merchant' => 'dog-ear-books'],
+                'enabled' => false,
+            ]);
+            $sources->save($source) || throw new RuntimeException('Couldn’t save the Feefo source: '.json_encode($source->getErrors()));
+        }
+
+        return $report->added;
     }
 
     /**

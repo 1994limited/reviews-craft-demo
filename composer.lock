@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c91f88e7d981def2e91a789d09afdb96",
+    "content-hash": "5f4e0d36767448c251976b9466a4bb2c",
     "packages": [
         {
             "name": "1994/reviews-core",
-            "version": "dev-main",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1994limited/reviews-core.git",
-                "reference": "59def460368f495169a84a8f0997cff492d5c379"
+                "reference": "0281620cd161f89042c5c5168b858c40e78a9c1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1994limited/reviews-core/zipball/59def460368f495169a84a8f0997cff492d5c379",
-                "reference": "59def460368f495169a84a8f0997cff492d5c379",
+                "url": "https://api.github.com/repos/1994limited/reviews-core/zipball/0281620cd161f89042c5c5168b858c40e78a9c1f",
+                "reference": "0281620cd161f89042c5c5168b858c40e78a9c1f",
                 "shasum": ""
             },
             "require": {
@@ -30,7 +30,6 @@
                 "phpstan/phpstan": "^2.1",
                 "phpunit/phpunit": "^11.5|^12.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -84,7 +83,7 @@
                 "issues": "https://github.com/1994limited/reviews-core/issues",
                 "source": "https://github.com/1994limited/reviews-core"
             },
-            "time": "2026-10-18T12:44:36+00:00"
+            "time": "2026-10-18T16:52:24+00:00"
         },
         {
             "name": "1994/reviews-craft",
@@ -92,16 +91,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/1994limited/reviews-craft.git",
-                "reference": "f4fd606f07581eeb7e814cb3439ede868093d478"
+                "reference": "721f1e7d20a8936c37bdd0bcfbe489550e4daf71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1994limited/reviews-craft/zipball/f4fd606f07581eeb7e814cb3439ede868093d478",
-                "reference": "f4fd606f07581eeb7e814cb3439ede868093d478",
+                "url": "https://api.github.com/repos/1994limited/reviews-craft/zipball/721f1e7d20a8936c37bdd0bcfbe489550e4daf71",
+                "reference": "721f1e7d20a8936c37bdd0bcfbe489550e4daf71",
                 "shasum": ""
             },
             "require": {
-                "1994/reviews-core": "^1.0@dev",
+                "1994/reviews-core": "^1.0",
                 "craftcms/cms": "^5.6",
                 "php": "^8.2"
             },
@@ -122,29 +121,20 @@
             "default-branch": true,
             "type": "craft-plugin",
             "extra": {
-                "handle": "reviews",
                 "name": "Reviews",
-                "developer": "1994",
-                "developerUrl": "https://1994.co.uk",
-                "documentationUrl": "https://github.com/1994limited/reviews-craft/blob/main/docs/README.md",
                 "class": "nineteenninetyfour\\reviews\\Plugin",
-                "changelogUrl": "https://raw.githubusercontent.com/1994limited/reviews-craft/main/CHANGELOG.md"
+                "handle": "reviews",
+                "developer": "1994",
+                "changelogUrl": "https://raw.githubusercontent.com/1994limited/reviews-craft/main/CHANGELOG.md",
+                "developerUrl": "https://1994.co.uk",
+                "documentationUrl": "https://github.com/1994limited/reviews-craft/blob/main/docs/README.md"
             },
             "autoload": {
                 "psr-4": {
                     "nineteenninetyfour\\reviews\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "nineteenninetyfour\\reviews\\tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "codecept run"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -157,9 +147,9 @@
             ],
             "description": "Reviews and star ratings for Craft CMS, collected on your own site: moderation, replies, photos, helpful votes, verified buyers with Craft Commerce, review request emails, review schema, and import or sync from other platforms.",
             "keywords": [
+                "Craft",
                 "cms",
                 "commerce",
-                "craft",
                 "craft-plugin",
                 "craftcms",
                 "ratings",
@@ -169,12 +159,12 @@
                 "testimonials"
             ],
             "support": {
-                "email": "hello@1994.co.uk",
                 "docs": "https://github.com/1994limited/reviews-craft/blob/main/docs/README.md",
+                "email": "hello@1994.co.uk",
                 "issues": "https://github.com/1994limited/reviews-craft/issues",
                 "source": "https://github.com/1994limited/reviews-craft"
             },
-            "time": "2026-10-18T13:09:52+00:00"
+            "time": "2026-10-18T17:16:18+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",

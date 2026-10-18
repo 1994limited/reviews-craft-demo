@@ -23,16 +23,6 @@
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ]
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/1994limited/reviews-craft"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/1994limited/reviews-core"
-    }
-  ],
   "name": "1994/reviews-craft-demo",
   "description": "Dog-ear Books: a demo site for Reviews for Craft.",
   "license": "proprietary",

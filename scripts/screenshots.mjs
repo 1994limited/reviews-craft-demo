@@ -40,6 +40,12 @@ await page.addStyleTag({ content: 'body { background: #1c1917 !important; color:
 await settle();
 await shot('.reviews-ui__columns', 'reviews-dark.png', 820);
 
+// A review imported from Trustpilot, showing where it came from.
+await page.goto(`${base}/books/coral-arithmetic?sort=newest`, { waitUntil: 'networkidle0' });
+const imported = await page.evaluateHandle(() => [...document.querySelectorAll('.reviews-ui__review')].find((el) => el.textContent.includes('From Trustpilot')));
+await imported.asElement().screenshot({ path: `${out}/imported.png` });
+console.log(`${out}/imported.png`);
+
 // The control panel, signed in as the admin.
 const link = execFileSync('php', ['craft', 'users/impersonate', 'admin'], { encoding: 'utf8' }).match(/https?:\/\/\S+/)[0];
 await page.goto(link, { waitUntil: 'networkidle0' });
@@ -54,6 +60,20 @@ await page.goto(`${base}/admin/reviews/${review}`, { waitUntil: 'networkidle0' }
 await settle(1200);
 await page.screenshot({ path: `${out}/cp-review.png` });
 console.log(`${out}/cp-review.png`);
+
+// Import: an export uploaded and previewed (scripts/sample-export.csv).
+await page.goto(`${base}/admin/reviews/import`, { waitUntil: 'networkidle0' });
+await (await page.$('input[type=file]')).uploadFile(new URL('./sample-export.csv', import.meta.url).pathname);
+await Promise.all([page.waitForNavigation({ waitUntil: 'networkidle0' }), page.click('button.submit')]);
+await settle(800);
+await page.screenshot({ path: `${out}/cp-import.png` });
+console.log(`${out}/cp-import.png`);
+
+// Sync: the sources reviews are synced from.
+await page.goto(`${base}/admin/reviews/sources`, { waitUntil: 'networkidle0' });
+await settle(800);
+await page.screenshot({ path: `${out}/cp-sync.png` });
+console.log(`${out}/cp-sync.png`);
 
 await page.goto(`${base}/admin/reviews/settings`, { waitUntil: 'networkidle0' });
 await settle(1200);

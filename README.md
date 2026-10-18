@@ -5,7 +5,8 @@ A made-up independent bookshop for trying [Reviews for Craft](https://github.com
 - an average, star breakdown and criteria (Story, Writing) on each book;
 - replies from the shop, "helpful" votes, and a customer's verified review;
 - reviews waiting for an editor, one rejected and one marked as spam, to moderate in the control panel;
-- the ready-made reviews section and its default styles (`templates/books/_product.twig`), and review schema on each book's page.
+- the ready-made reviews section and its default styles (`templates/books/_product.twig`), and review schema on each book's page;
+- two reviews imported from Trustpilot (on Coral Arithmetic), which say where they came from and don't count towards the average, and a Feefo sync source, switched off so the demo never calls Feefo.
 
 ## Running it with Herd or Valet
 
@@ -31,7 +32,8 @@ Sign in at `/admin` with the username and password you gave `craft install`. The
 2. In the control panel, **Reviews → Waiting for moderation**: approve it, and reply.
 3. Back on the book's page, it's there with the reply, and the average has changed.
 4. Under **Reviews → Settings**, try reviews from signed-in users only, photos, a captcha, or publishing verified buyers' reviews straight away.
-5. Jo (`jo@example.com`) bought two books. Set Jo a password under **Users**, sign in as Jo, and their review is marked as a verified buyer's.
+5. Under **Reviews → Import**, upload `scripts/sample-export.csv` (a Yotpo export) to see what would be added before anything is.
+6. Jo (`jo@example.com`) bought two books. Set Jo a password under **Users**, sign in as Jo, and their review is marked as a verified buyer's.
 
 ## Screenshots
 
