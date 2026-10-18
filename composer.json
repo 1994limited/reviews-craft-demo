@@ -1,8 +1,8 @@
 {
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": true,
   "require": {
-    "1994/reviews-craft": "dev-main",
+    "1994/reviews-craft": "^1.0",
     "craftcms/cms": "^5.9.0",
     "craftcms/commerce": "^5.0",
     "vlucas/phpdotenv": "^5.4.0"

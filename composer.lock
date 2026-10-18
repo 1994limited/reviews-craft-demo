@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f4e0d36767448c251976b9466a4bb2c",
+    "content-hash": "76c83a2a2cc29fe74c215742fbdb402b",
     "packages": [
         {
             "name": "1994/reviews-core",
@@ -41,25 +41,7 @@
                     "NineteenNinetyFour\\Reviews\\Core\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "NineteenNinetyFour\\Reviews\\Core\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ],
-                "lint": [
-                    "pint --test"
-                ],
-                "analyse": [
-                    "phpstan analyse --memory-limit=1G"
-                ],
-                "boundaries": [
-                    "php bin/check-boundaries"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -87,16 +69,16 @@
         },
         {
             "name": "1994/reviews-craft",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1994limited/reviews-craft.git",
-                "reference": "721f1e7d20a8936c37bdd0bcfbe489550e4daf71"
+                "reference": "7f1f15f93d9762f7a92c3a89b53498b1c4139c19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1994limited/reviews-craft/zipball/721f1e7d20a8936c37bdd0bcfbe489550e4daf71",
-                "reference": "721f1e7d20a8936c37bdd0bcfbe489550e4daf71",
+                "url": "https://api.github.com/repos/1994limited/reviews-craft/zipball/7f1f15f93d9762f7a92c3a89b53498b1c4139c19",
+                "reference": "7f1f15f93d9762f7a92c3a89b53498b1c4139c19",
                 "shasum": ""
             },
             "require": {
@@ -118,7 +100,6 @@
                 "craftcms/commerce": "For verified buyer badges, buyers-only reviews and review request emails after an order.",
                 "nystudio107/craft-seomatic": "To add review schema to SEOmatic's own JSON-LD."
             },
-            "default-branch": true,
             "type": "craft-plugin",
             "extra": {
                 "name": "Reviews",
@@ -164,7 +145,7 @@
                 "issues": "https://github.com/1994limited/reviews-craft/issues",
                 "source": "https://github.com/1994limited/reviews-craft"
             },
-            "time": "2026-10-18T17:16:18+00:00"
+            "time": "2026-10-18T18:42:04+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -9124,10 +9105,8 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "1994/reviews-craft": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},
