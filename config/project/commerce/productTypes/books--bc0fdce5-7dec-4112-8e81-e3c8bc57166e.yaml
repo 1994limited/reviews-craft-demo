@@ -1,0 +1,77 @@
+defaultPlacement: end
+descriptionFormat: '{product.title} - {title}'
+enableVersioning: false
+handle: books
+hasDimensions: false
+hasProductTitleField: true
+hasVariantTitleField: true
+isStructure: false
+maxLevels: null
+maxVariants: 1
+name: Books
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary product page'
+      -
+        - urlFormat
+        - '{url}'
+productFieldLayouts:
+  3797fd05-3231-4a44-8fa3-b36991fe3381:
+    cardThumbAlignment: end
+    cardView:
+      - defaultSku
+      - defaultPrice
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            attribute: variants
+            dateAdded: null
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            mandatory: true
+            orientation: null
+            requirable: false
+            required: false
+            tip: null
+            translatable: false
+            type: craft\commerce\fieldlayoutelements\VariantsField
+            uid: 8f8f2bd6-0288-4f5c-9db8-5ac4bf801442
+            userCondition: null
+            warning: null
+        name: Variants
+        uid: debd561a-a9fe-4c61-bf7f-ec9477f119ee
+        userCondition: null
+    thumbFieldKey: null
+productTitleFormat: ''
+productTitleTranslationKeyFormat: null
+productTitleTranslationMethod: site
+productUiLabelFormat: '{title}'
+propagationMethod: all
+showSlugField: true
+siteSettings:
+  d2c7146f-a2b9-4b3c-bb25-3c22407127f7: # Dog-ear Books
+    enabledByDefault: true
+    hasUrls: true
+    template: books/_product
+    uriFormat: 'books/{slug}'
+skuFormat: null
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+variantFieldLayouts:
+  5606d479-bef6-4dde-b178-44f7cbd9484a:
+    cardThumbAlignment: end
+    cardView:
+      - sku
+      - priceView
+    thumbFieldKey: null
+variantTitleFormat: '{product.title}'
+variantTitleTranslationKeyFormat: null
+variantTitleTranslationMethod: site
+variantUiLabelFormat: '{title}'

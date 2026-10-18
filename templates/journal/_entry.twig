@@ -1,0 +1,5 @@
+{% extends '_layouts/site' %}
+{% block content %}
+    <h1>{{ entry.title }}</h1>
+    {{ craft.reviews.display(entry, { heading: 'What readers think' }) }}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends '_layouts/site' %}
+{% block content %}
+    <h1>Books</h1>
+    <ul class="books">
+        {% for product in craft.products.type('books').orderBy('title').all() %}
+            {% set summary = craft.reviews.summary(product) %}
+            <li>
+                <a href="{{ product.url }}"><strong>{{ product.title }}</strong></a>
+                <div class="reviews-ui">
+                    {% if summary.count %}
+                        {% include '_reviews/_stars' with { rating: summary.average } %}
+                        <span class="reviews-ui__muted">{{ summary.rounded }} ({{ summary.count }})</span>
+                    {% else %}
+                        <span class="reviews-ui__muted">No reviews yet</span>
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    <h2>Journal</h2>
+    <ul>{% for entry in craft.entries.section('journal').all() %}<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>{% endfor %}</ul>
+{% endblock %}

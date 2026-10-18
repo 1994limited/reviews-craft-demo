@@ -1,0 +1,11 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+/node_modules
+/storage/*
+!/storage/.gitkeep
+/web/cpresources
+/.demo-login
+/node_modules
+/web/uploads/**/_*/

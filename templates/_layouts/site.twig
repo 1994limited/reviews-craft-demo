@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ currentSite.language }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if not craft.app.plugins.isPluginEnabled('seomatic') %}<title>{{ (product ?? entry ?? null).title ?? siteName }}</title>{% endif %}
+    <style>
+        body { font: 17px/1.55 Georgia, 'Times New Roman', serif; color: #2b2522; background: #fbf8f3; margin: 0; }
+        .page { max-width: 64rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+        header a { color: inherit; text-decoration: none; font-weight: bold; }
+        .books { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 1.25rem; list-style: none; padding: 0; }
+        .books li { background: #fff; border: 1px solid #e8e0d4; border-radius: 8px; padding: 1rem; }
+        .books a { color: inherit; }
+    </style>
+    {{ craft.reviews.styles() }}
+</head>
+<body>
+    <div class="page">
+        <header><a href="{{ siteUrl }}">{{ siteName }}</a></header>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

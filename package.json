@@ -1,0 +1,8 @@
+{
+  "name": "reviews-craft-demo",
+  "private": true,
+  "description": "Screenshots of Dog-ear Books for Reviews for Craft's docs.",
+  "devDependencies": {
+    "puppeteer": "^24.43.1"
+  }
+}

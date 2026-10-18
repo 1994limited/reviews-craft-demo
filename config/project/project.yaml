@@ -1,0 +1,115 @@
+dateModified: 1792328897
+email:
+  fromEmail: admin@example.com
+  fromName: 'Dog-ear Books'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: '@web/uploads'
+meta:
+  __names__:
+    0cfa183f-9b1c-426e-850a-1958ff0386bd: Blurb # Blurb
+    1ec0f01c-4bf5-4d47-a02e-1573b5501461: Cover # Cover
+    07c1d019-d946-4a96-b10f-69404e1707e5: Home # Home
+    724e6905-3437-4471-93cb-039103655c16: 'Featured image' # Featured image
+    730bda75-cf7a-4578-ab35-4aeb00dbabc9: Body # Body
+    932a7e3d-5be3-43a4-9675-dcb809f04f99: Excerpt # Excerpt
+    996df2ec-8882-4210-849d-a386f289c075: Price # Price
+    6594aa4c-e753-4e2d-9139-8b27953f3cc0: Author # Author
+    10097e50-c0f9-42d8-bd00-14a4469aabb5: Book # Book
+    55379cdf-c127-4155-add3-431fe3f86165: Article # Article
+    60079b62-c919-4bbf-84a3-74ee8a02957c: Books # Books
+    a0a48eb1-4645-40e0-a6ef-5185be8c187c: Dummy # Dummy
+    bbd38823-35f0-450c-aa1d-affdaee98284: Images # Images
+    bc0fdce5-7dec-4112-8e81-e3c8bc57166e: Books # Books
+    c51a85b8-d0a7-4322-aa48-5a6ff821f176: New # New
+    d2c7146f-a2b9-4b3c-bb25-3c22407127f7: 'Dog-ear Books' # Dog-ear Books
+    d760df9a-bdff-450a-8605-0e0716436df4: Journal # Journal
+    ddf8e533-95fe-41ba-88c0-6b4d8aebaf31: 'Dog-ear Books' # Dog-ear Books
+    eafb2eb9-2532-4417-8c8b-46a72fb5a3ba: Primary # Primary
+    ecd062f4-d60d-48ab-8447-2e4517697294: Home # Home
+plugins:
+  commerce:
+    edition: pro
+    enabled: true
+    licenseKey: 3MOMN5J37T5DG347W9P3VOIT
+    schemaVersion: 5.7.0.0
+  reviews:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      autoApprove: never
+      bodyLimit: 5000
+      bodyMinimum: 0
+      buyersOnly: false
+      captcha: ''
+      captchaScore: 0.5
+      captchaSecretKey: ''
+      captchaSiteKey: ''
+      criteria:
+        -
+          __assoc__:
+            -
+              - handle
+              - story
+            -
+              - label
+              - Story
+        -
+          __assoc__:
+            -
+              - handle
+              - writing
+            -
+              - label
+              - Writing
+      deletedUsers: anonymise
+      maxLinks: 2
+      minimumSeconds: 3
+      nameDisplay: short
+      nameLimit: 60
+      notifyApproved: false
+      notifyReplied: false
+      perPage: 10
+      photosEnabled: false
+      photosFolder: reviews
+      photosMax: 4
+      photosMaxSize: 8192
+      photosVolume: images
+      productTypes:
+        - books
+      requestsDelayDays: 14
+      requestsEnabled: true
+      requestsOrderStatuses:
+        - ''
+      requireBody: true
+      requireTitle: false
+      schemaOutput: manual
+      schemaType: Product
+      sections:
+        - journal
+      sites: shared
+      throttleSubmit: 5
+      throttleVotes: 30
+      titleLimit: 120
+      votesEnabled: true
+      who: anyone
+system:
+  edition: pro
+  live: true
+  name: 'Dog-ear Books'
+  schemaVersion: 5.11.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

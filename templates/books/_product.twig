@@ -1,0 +1,7 @@
+{% extends '_layouts/site' %}
+{% block content %}
+    <h1>{{ product.title }}</h1>
+    <p>{{ product.defaultPrice|currency(craft.commerce.currentStore.currency ?? 'GBP') }}</p>
+    {{ craft.reviews.display(product) }}
+    {{ craft.reviews.schema(product) }}
+{% endblock %}

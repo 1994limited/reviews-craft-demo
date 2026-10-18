@@ -1,0 +1,49 @@
+{
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "1994/reviews-craft": "@dev",
+    "craftcms/cms": "^5.9.0",
+    "craftcms/commerce": "^5.0",
+    "vlucas/phpdotenv": "^5.4.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "craftcms/plugin-installer": true,
+      "yiisoft/yii2-composer": true
+    },
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.2"
+    }
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  },
+  "repositories": [
+    {
+      "name": "reviews-craft",
+      "type": "path",
+      "url": "../reviews-craft"
+    },
+    {
+      "name": "reviews-core",
+      "type": "path",
+      "url": "../reviews-core"
+    }
+  ],
+  "name": "1994/reviews-craft-demo",
+  "description": "Dog-ear Books: a demo site for Reviews for Craft.",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "modules\\demo\\": "modules/demo/"
+    }
+  },
+  "require-dev": {
+    "yiisoft/yii2-shell": "^2.0.3"
+  }
+}
