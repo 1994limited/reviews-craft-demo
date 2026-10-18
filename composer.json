@@ -2,7 +2,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "1994/reviews-craft": "@dev",
+    "1994/reviews-craft": "dev-main",
     "craftcms/cms": "^5.9.0",
     "craftcms/commerce": "^5.0",
     "vlucas/phpdotenv": "^5.4.0"
@@ -25,14 +25,12 @@
   },
   "repositories": [
     {
-      "name": "reviews-craft",
-      "type": "path",
-      "url": "../reviews-craft"
+      "type": "vcs",
+      "url": "https://github.com/1994limited/reviews-craft"
     },
     {
-      "name": "reviews-core",
-      "type": "path",
-      "url": "../reviews-core"
+      "type": "vcs",
+      "url": "https://github.com/1994limited/reviews-core"
     }
   ],
   "name": "1994/reviews-craft-demo",
