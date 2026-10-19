@@ -69,16 +69,16 @@
         },
         {
             "name": "1994/reviews-craft",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1994limited/reviews-craft.git",
-                "reference": "7f1f15f93d9762f7a92c3a89b53498b1c4139c19"
+                "reference": "a41f7949c413a34a29c70a5154678c110a6d17ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1994limited/reviews-craft/zipball/7f1f15f93d9762f7a92c3a89b53498b1c4139c19",
-                "reference": "7f1f15f93d9762f7a92c3a89b53498b1c4139c19",
+                "url": "https://api.github.com/repos/1994limited/reviews-craft/zipball/a41f7949c413a34a29c70a5154678c110a6d17ca",
+                "reference": "a41f7949c413a34a29c70a5154678c110a6d17ca",
                 "shasum": ""
             },
             "require": {
@@ -145,7 +145,7 @@
                 "issues": "https://github.com/1994limited/reviews-craft/issues",
                 "source": "https://github.com/1994limited/reviews-craft"
             },
-            "time": "2026-10-18T18:42:04+00:00"
+            "time": "2026-10-19T17:15:27+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
