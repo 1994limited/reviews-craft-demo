@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "1994/reviews-core",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1994limited/reviews-core.git",
-                "reference": "0281620cd161f89042c5c5168b858c40e78a9c1f"
+                "reference": "13940ffee87f99ae9a0d6246a0f7ea10c6fcaa43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1994limited/reviews-core/zipball/0281620cd161f89042c5c5168b858c40e78a9c1f",
-                "reference": "0281620cd161f89042c5c5168b858c40e78a9c1f",
+                "url": "https://api.github.com/repos/1994limited/reviews-core/zipball/13940ffee87f99ae9a0d6246a0f7ea10c6fcaa43",
+                "reference": "13940ffee87f99ae9a0d6246a0f7ea10c6fcaa43",
                 "shasum": ""
             },
             "require": {
@@ -65,24 +65,24 @@
                 "issues": "https://github.com/1994limited/reviews-core/issues",
                 "source": "https://github.com/1994limited/reviews-core"
             },
-            "time": "2026-10-18T16:52:24+00:00"
+            "time": "2026-10-19T18:24:14+00:00"
         },
         {
             "name": "1994/reviews-craft",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1994limited/reviews-craft.git",
-                "reference": "a41f7949c413a34a29c70a5154678c110a6d17ca"
+                "reference": "0d07d33bdb4dec7a60edf612ce1292de54481562"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1994limited/reviews-craft/zipball/a41f7949c413a34a29c70a5154678c110a6d17ca",
-                "reference": "a41f7949c413a34a29c70a5154678c110a6d17ca",
+                "url": "https://api.github.com/repos/1994limited/reviews-craft/zipball/0d07d33bdb4dec7a60edf612ce1292de54481562",
+                "reference": "0d07d33bdb4dec7a60edf612ce1292de54481562",
                 "shasum": ""
             },
             "require": {
-                "1994/reviews-core": "^1.0",
+                "1994/reviews-core": "^1.0.1",
                 "craftcms/cms": "^5.6",
                 "php": "^8.2"
             },
@@ -145,7 +145,7 @@
                 "issues": "https://github.com/1994limited/reviews-craft/issues",
                 "source": "https://github.com/1994limited/reviews-craft"
             },
-            "time": "2026-10-19T17:15:27+00:00"
+            "time": "2026-10-19T18:25:41+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
